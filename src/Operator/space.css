@@ -1,0 +1,25 @@
+.parkingGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* adjust minmax to desired slot width */
+    gap: 10px; /* adjust the gap between slots */
+    padding: 25px; /* adjust the padding inside the grid */
+    border: 5px solid black; /* border for the grid */
+    max-width: 100%; /* maximum width of the grid */
+    margin: 0 auto; /* center the grid horizontally */
+  }
+  
+  .parkingSlot {
+    width: 100%; /* width relative to column width */
+    aspect-ratio: 1; /* make slots square */
+    background-color: green; /* default slot color */
+    color: white; /* text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .parkingSlot.occupied {
+    background-color: red; /* occupied slot color */
+  }
+  
